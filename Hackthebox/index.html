@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Content</title>
+</head>
+<body>
+    <h1>Contents of /etc/passwd</h1>
+    <pre>
+    <?php
+    // Read and display the contents of /etc/passwd
+    if (file_exists('/etc/passwd')) {
+        echo htmlspecialchars(file_get_contents('/etc/passwd'));
+    } else {
+        echo "The file does not exist or cannot be accessed.";
+    }
+    ?>
+    </pre>
+</body>
+</html>
